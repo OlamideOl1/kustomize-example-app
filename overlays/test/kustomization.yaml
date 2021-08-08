@@ -4,10 +4,11 @@ kind: Kustomization
 bases:
 - ../../base
 
-commonLabels:
-  env: dev
-
 resources:
   - namespace.yaml
 
-namespace: dev
+namespace: test
+
+patchesStrategicMerge:
+  - deployment.yaml
+  - service.yaml
