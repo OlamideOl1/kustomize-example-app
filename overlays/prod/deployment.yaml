@@ -2,8 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment # necessary for Kustomize identification
-  labels:
-    env: prod
 spec:
   replicas: 3
   strategy:

@@ -4,6 +4,9 @@ kind: Kustomization
 bases:
 - ../../base
 
+commonLabels:
+  env: prod
+
 resources:
   - namespace.yaml
 
@@ -11,4 +14,3 @@ namespace: prod
 
 patchesStrategicMerge:
   - deployment.yaml
-  - service.yaml

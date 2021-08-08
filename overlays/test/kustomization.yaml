@@ -4,6 +4,9 @@ kind: Kustomization
 bases:
 - ../../base
 
+commonLabels:
+  env: test
+
 resources:
   - namespace.yaml
 
@@ -11,4 +14,3 @@ namespace: test
 
 patchesStrategicMerge:
   - deployment.yaml
-  - service.yaml
